@@ -1,0 +1,16 @@
+let arr1 = [9, 9, 9, 9, 7, 9, 8];
+let arr2 = [23, 23, 30, 28, 30, 23, 23];
+
+function solution(arr1, arr2) {
+  let answer = [];
+  for (let i = 0; i < arr2.length; i++) {
+    if (arr2[i] < 29) {
+      answer.push(arr2[i] - arr1[i]);
+    } else {
+      answer.push(21 - arr1[i]);
+    }
+  }
+  return answer.reduce((acc, cur) => acc + cur, 0);
+}
+
+console.log(solution(arr1, arr2));
